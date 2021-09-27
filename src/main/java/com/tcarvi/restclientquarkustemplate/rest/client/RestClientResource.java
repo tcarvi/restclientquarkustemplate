@@ -34,14 +34,14 @@ public class RestClientResource implements RestClientResourceInterface {
     @GET
     @Path("/name-async/{name}")
     @Produces(MediaType.APPLICATION_JSON)
-    public String nameAsync(@PathParam String name) {
+    public String getNameAsync(@PathParam String name) {
         return restClientService.exec(name);
     }
 
     @GET
     @Path("/name-uni/{name}")
     @Produces(MediaType.APPLICATION_JSON)
-    public String nameMutiny(@PathParam String name) {
+    public String getNameMutiny(@PathParam String name) {
         return restClientService.exec(name);
     }
 
