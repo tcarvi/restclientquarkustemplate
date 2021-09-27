@@ -18,9 +18,6 @@ public class RestClientResource implements RestClientResourceInterface {
     @Inject
     RestClientService restClientService;
 
-    @RestClient
-    RestClientResourceInterface restClientResourceInterface;
-
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     public String restClientResourceExecution(){

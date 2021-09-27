@@ -1,13 +1,11 @@
 package com.tcarvi.restclientquarkustemplate.rest.client;
 
 import org.jboss.resteasy.annotations.jaxrs.PathParam;
-import org.eclipse.microprofile.rest.client.inject.RegisterRestClient;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 
-@RegisterRestClient
 public interface RestClientResourceInterface {
 
     @GET
