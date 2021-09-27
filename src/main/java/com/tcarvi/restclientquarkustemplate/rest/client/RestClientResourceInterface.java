@@ -1,6 +1,7 @@
 package com.tcarvi.restclientquarkustemplate.rest.client;
 
 import org.jboss.resteasy.annotations.jaxrs.PathParam;
+import io.vertx.core.json.JsonObject;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
@@ -10,22 +11,22 @@ public interface RestClientResourceInterface {
 
     @GET
     @Produces("application/json")
-    String restClientResourceExecution();
+    JsonObject restClientResourceExecution();
 
     @GET
     @Path("/name/{name}")
     @Produces("application/json")
-    String getName(@PathParam String name);
+    JsonObject getName(@PathParam String name);
 
     @GET
     @Path("/name-async/{name}")
     @Produces("application/json")
-    String getNameAsync(@PathParam String name);
+    JsonObject getNameAsync(@PathParam String name);
 
     @GET
     @Path("/name-uni/{name}")
     @Produces("application/json")
-    String getNameMutiny(@PathParam String name);
+    JsonObject getNameMutiny(@PathParam String name);
 
     // @GET
     // @Produces(MediaType.TEXT_PLAIN)

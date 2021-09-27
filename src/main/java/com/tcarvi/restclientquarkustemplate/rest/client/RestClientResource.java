@@ -5,6 +5,7 @@ import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
+import io.vertx.core.json.JsonObject;
 
 import org.eclipse.microprofile.rest.client.inject.RestClient;
 
@@ -20,28 +21,28 @@ public class RestClientResource implements RestClientResourceInterface {
 
     @GET
     @Produces(MediaType.APPLICATION_JSON)
-    public String restClientResourceExecution(){
+    public JsonObject restClientResourceExecution(){
         return restClientService.exec();
     }
 
     @GET
     @Path("/name/{name}")
     @Produces(MediaType.APPLICATION_JSON)
-    public String getName(@PathParam String name) {
+    public JsonObject getName(@PathParam String name) {
         return restClientService.exec(name);
     }
 
     @GET
     @Path("/name-async/{name}")
     @Produces(MediaType.APPLICATION_JSON)
-    public String getNameAsync(@PathParam String name) {
+    public JsonObject getNameAsync(@PathParam String name) {
         return restClientService.exec(name);
     }
 
     @GET
     @Path("/name-uni/{name}")
     @Produces(MediaType.APPLICATION_JSON)
-    public String getNameMutiny(@PathParam String name) {
+    public JsonObject getNameMutiny(@PathParam String name) {
         return restClientService.exec(name);
     }
 
