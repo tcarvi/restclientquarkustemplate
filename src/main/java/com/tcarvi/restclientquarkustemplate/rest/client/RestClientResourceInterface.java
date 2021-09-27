@@ -15,17 +15,17 @@ public interface RestClientResourceInterface {
     @GET
     @Path("/name/{name}")
     @Produces("application/json")
-    String name(@PathParam String name);
+    String getName(@PathParam String name);
 
     @GET
     @Path("/name-async/{name}")
     @Produces("application/json")
-    String nameAsync(@PathParam String name);
+    String getNameAsync(@PathParam String name);
 
     @GET
     @Path("/name-uni/{name}")
     @Produces("application/json")
-    String nameMutiny(@PathParam String name);
+    String getNameMutiny(@PathParam String name);
 
     // @GET
     // @Produces(MediaType.TEXT_PLAIN)

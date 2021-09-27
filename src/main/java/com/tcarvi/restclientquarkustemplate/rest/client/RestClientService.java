@@ -30,7 +30,7 @@ public class RestClientService {
         } finally {
             // Execução necessária por causa do código do try-catch anterior.
         }
-        return "restClient Simple Service Execution with param name " + name;
+        return "restClient Simple Service Execution with param name = " + name;
     }
 
 }

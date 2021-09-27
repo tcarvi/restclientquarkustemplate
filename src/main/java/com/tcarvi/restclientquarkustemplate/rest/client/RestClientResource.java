@@ -27,7 +27,7 @@ public class RestClientResource implements RestClientResourceInterface {
     @GET
     @Path("/name/{name}")
     @Produces(MediaType.APPLICATION_JSON)
-    public String name(@PathParam String name) {
+    public String getName(@PathParam String name) {
         return restClientService.exec(name);
     }
 
